@@ -1,0 +1,43 @@
+Estrutura switch()
+
+A variável na estrutura switch() deve ser de tipos simples, normalmente char ou int. Depois de avaliar a expressão, o seu valor será comparado com as condições do case. Se houver algum valor que satisfaça a condição, o comando referente a ela será executado. Opcionalmente, podemos ter o bloco “default”. Este bloco será executado quando o valor da variável a ser analisada pelo switch() não corresponde a nenhum dos casos detalhados.
+
+Podemos afirmar que a sintaxe do switch() é a descrita abaixo:
+
+switch(<variável a ser analisada>) {
+    case <1° valor possível>:
+        // Comandos a serem realizados quando a variável tiver este valor
+        break;
+    case <2° valor possível>:
+        // Comandos a serem realizados quando a variável tiver este valor
+        break;
+    //...
+    case <n-ésimo valor possível>:
+        // Comandos a serem realizados quando a variável tiver este valor
+        break;
+    [default:
+        // Comandos a serem realizados quando nenhum caso for executado
+        break;]
+}
+
+ 
+C# (C Sharp)
+Vamos imaginar que o usuário deverá responder se ele é maior de idade para o nosso software... Caso ele pressione a tecla “S”, deveremos escrever a mensagem “Usuário maior de idade”; se o usuário pressionar “N”, deveremos escrever a mensagem “Usuário menor de idade”. Caso nem as teclas “S” ou “N” sejam pressionadas, deveremos escrever a mensagem “Opção inválida”. Nós podemos implementar este algoritmo utilizando o switch()... Ele ficaria da seguinte forma:
+
+char opcao;
+printf("Usuário, você é maior de idade?");
+scanf("%s", &opcao);
+switch (opcao) {
+    case ‘S’:
+        printf("Usuário maior de idade");
+        break;
+    case ‘N’:
+        printf("Usuário menor de idade");
+        break;
+    default:
+        printf("Opção inválida");
+        break;
+}
+
+C# (C Sharp)
+Perceba que nós utilizamos um comando novo, o “break”. Este comando é utilizado para informar que o bloco do que deve ser executado dentro de cada caso foi finalizado.
