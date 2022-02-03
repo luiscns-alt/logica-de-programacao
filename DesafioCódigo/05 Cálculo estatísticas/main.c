@@ -1,3 +1,4 @@
+//Informe seu código aqui
 float soma, media, maior, menor;
 soma = 0;
 maior = 0;
